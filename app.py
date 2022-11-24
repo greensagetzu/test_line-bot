@@ -41,10 +41,12 @@ def handle_message(event):
     r = "Sorry, I don't understand."
     
 
-    if msg == 'Hello':
+    if msg in ['Hello', 'hello']:
         r = 'Hi'
-    elif msg == 'I need help':
+    elif msg == 'I have a question':
         r = 'How can I help you?'
+    elif msg == 'Who are you?':
+        r = 'I am robot'
 
     
 
