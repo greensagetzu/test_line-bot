@@ -3,7 +3,7 @@ class Reply:
         self.msg = msg
 
 
-	def message(self, msg):
+	def message(self):
         r = "Sorry, I don't understand."
     
 
