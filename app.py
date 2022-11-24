@@ -10,6 +10,8 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
+from reply import *
+
 app = Flask(__name__)
 
 line_bot_api = LineBotApi('cI59LiOWPAA/UAqPrpBNk5+OOUUn9jwuzZ2n0xDaoJcx/NYZUD5DDXREs/u6aXc7nJqOqsp6ahnG6UKVCh0AgcQ60/IP8+VEhyksP3E3VcKZ5b9KGC5sDcf8RY6yFY48cdG1hE3Fg3vfd3dZJ+37FQdB04t89/1O/w1cDnyilFU=')
@@ -38,17 +40,9 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    r = "Sorry, I don't understand."
-    
 
-    if msg in ['Hello', 'hello']:
-        r = 'Hi'
-    elif msg == 'I have a question':
-        r = 'How can I help you?'
-    elif msg == 'Who are you?':
-        r = 'I am robot'
-
-    
+    r = Reply(msg)
+    r.message()
 
     line_bot_api.reply_message(
         event.reply_token,
