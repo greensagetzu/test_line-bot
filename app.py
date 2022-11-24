@@ -38,14 +38,15 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
+    r = "Sorry, I don't understand."
     
 
-    if msg == 'Hello' 
+    if msg == 'Hello':
         r = 'Hi'
-    elif msg == 'I need help'
+    elif msg == 'I need help':
         r = 'How can I help you?'
 
-    r = "Sorry, I don't understand."
+    
 
     line_bot_api.reply_message(
         event.reply_token,
