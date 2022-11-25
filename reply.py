@@ -16,4 +16,5 @@ class Reply:
 
         return r
 
- 
+    def __str__(self):
+    	return self.msg

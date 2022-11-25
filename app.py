@@ -42,11 +42,11 @@ def handle_message(event):
     msg = event.message.text
 
     r = Reply(msg)
-    r.message()
+    k = r.message()
 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=r))
+        TextSendMessage(text=k))
 
 
 if __name__ == "__main__":
