@@ -65,12 +65,18 @@ def handle_message(event):
 
     elif msg in ['hi', 'hey', 'hello', 'greetings', 'wassup']:
         r = Reply(msg)
-        k = r.message()
+        message = r.greeting_response()
 
         line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=k))
-        
+        TextSendMessage(text=message))
+
+    elif msg in ['exit', 'see you later', 'bye', 'quit', 'break']:
+        message = "Chat with you later !"
+
+        line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=message))
 
     
     line_bot_api.reply_message(
