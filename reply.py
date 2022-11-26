@@ -20,8 +20,8 @@ class Reply:
                 r = random.choice(bot_greetings)
                 return r + " I am Doc Bot for short. I will answer your question about chronic Kidney Disease. If ypu want to exit, type bye."
 
-    def exit(self):
-    	
+    
+
 
 
 
