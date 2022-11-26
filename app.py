@@ -45,8 +45,8 @@ def handle_message(event):
 
     if 'sorry' in msg:
         sticker_message = StickerSendMessage(
-            package_id = '11538',
-            sticker_id = '51626496'
+            package_id = '446',
+            sticker_id = '2016'
         )
         line_bot_api.reply_message(
         event.reply_token,
