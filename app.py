@@ -41,12 +41,10 @@ def callback():
 def handle_message(event):
     msg = event.message.text
 
-    msg = msg.lower()
 
-    if msg in ['hi', 'hey', 'hello', 'greetings', 'wassup']:
-        r = Reply(msg)
-        k = r.message()
-        line_bot_api.reply_message(event.reply_token, k)
+    r = Reply(msg)
+    k = r.message()
+        
 
     line_bot_api.reply_message(
         event.reply_token,
