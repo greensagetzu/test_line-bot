@@ -11,7 +11,6 @@ from linebot.models import (
 )
 
 from reply import *
-import nltk
 
 
 app = Flask(__name__)

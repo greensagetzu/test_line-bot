@@ -46,7 +46,7 @@ class Reply:
         for word in self.msg.split():
             if word in user_greetings:
                 r = random.choice(bot_greetings)
-                return r + " I am Doc Bot for short. I will answer your question about chronic Kidney Disease. If ypu want to exit, type bye."
+                return r + " It is Tribal Emergency Report. If you want to exit, type bye."
 
     # def index_sort(list_var):
     #     length = len(list_var)
@@ -66,7 +66,7 @@ class Reply:
     # Create the bots response
     # def bot_rsponse(self):
     #     self.msg = self.msg.lower()
-        
+
     #     sentence_list.append(self.msg)
     #     bot_rsponse = ''
     #     cm = CountVectorizer().fit_transform(sentence_list)
