@@ -45,19 +45,19 @@ class Reply:
                 return r + " I am Doc Bot for short. I will answer your question about chronic Kidney Disease. If ypu want to exit, type bye."
 
     def index_sort(list_var):
-    length = len(list_var)
-    list_index = list(range(0, length))
+        length = len(list_var)
+        list_index = list(range(0, length))
 
-    x = list_var
-    for i in range(length):
-        for j in range(length):
-            if x[list_index[i]] > x[list_index[j]]:
-                #swap
-                temp = list_index[i]
-                list_index[i] = list_index[j]
-                list_index[j] = temp
+        x = list_var
+        for i in range(length):
+            for j in range(length):
+                if x[list_index[i]] > x[list_index[j]]:
+                    #swap
+                    temp = list_index[i]
+                    list_index[i] = list_index[j]
+                    list_index[j] = temp
 
-    return list_index
+        return list_index
 
     # Create the bots response
     def bot_rsponse(self):
@@ -80,12 +80,12 @@ class Reply:
             if j > 2:
                 break
 
-	    if reponse_flag == 0:
-		    bot_rsponse = bot_rsponse+' '+"I apologize, I don't understand."
+        if reponse_flag == 0:
+            bot_rsponse = bot_rsponse+' '+"I apologize, I don't understand."
 
-	    sentence_list.remove(self.msg)
+        sentence_list.remove(self.msg)
 
-	    return bot_rsponse
+        return bot_rsponse
 
 
 
