@@ -45,6 +45,7 @@ def handle_message(event):
     if msg in user_greetings:
         r = Reply(msg)
         k = r.message()
+        line_bot_api.reply_message(event.reply_token, k)
 
     line_bot_api.reply_message(
         event.reply_token,
