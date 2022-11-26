@@ -34,8 +34,7 @@ class Reply:
                 r = random.choice(bot_greetings)
                 return r
 
-    def __str__(self):
-        return r
+    #
 
 
 
