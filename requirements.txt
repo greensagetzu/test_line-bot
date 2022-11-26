@@ -2,7 +2,6 @@ line-bot-sdk
 gunicorn
 flask
 Article
-string
 nltk
 numpy
 warnings
