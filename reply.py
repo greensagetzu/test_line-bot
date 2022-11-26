@@ -19,10 +19,14 @@ article.parse()
 article.nlp()
 corpus = article.text 
 
+#print(corpus)
+
 #Tokenization
 text = corpus
 sentence_list = nltk.sent_tokenize(text)  #A list of sentences
 
+#Print the list of sentences
+#print(sentence_list)
 
 class Reply:
     
@@ -62,6 +66,7 @@ class Reply:
     # Create the bots response
     def bot_rsponse(self):
         self.msg = self.msg.lower()
+        
         sentence_list.append(self.msg)
         bot_rsponse = ''
         cm = CountVectorizer().fit_transform(sentence_list)
