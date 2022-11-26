@@ -1,7 +1,6 @@
 line-bot-sdk
 gunicorn
 flask
-random
 Article
 string
 nltk
