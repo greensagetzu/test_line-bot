@@ -1,3 +1,10 @@
 line-bot-sdk
 gunicorn
 flask
+random
+Article
+string
+nltk
+numpy
+warnings
+Scikit-learn
