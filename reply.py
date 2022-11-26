@@ -2,24 +2,10 @@ import random
 
 class Reply:
     
-    #r = ' '
 
     def __init__(self,msg):
         self.msg = msg
 
-
-    # def message(self):
-    #     r = "Sorry, I don't understand."
-    
-
-    #     if self.msg in ['Hello', 'hello']:
-    #         r = 'Hi'
-    #     elif self.msg == 'I have a question':
-    #         r = 'How can I help you?'
-    #     elif self.msg == 'Who are you?':
-    #         r = 'I am robot'
-
-    #     return r
 
     def message(self):
         self.msg = self.msg.lower()
@@ -32,7 +18,7 @@ class Reply:
         for word in self.msg.split():
             if word in user_greetings:
                 r = random.choice(bot_greetings)
-                return r
+                return r + "I am Doctor Bot or Doc Bot for short. I will answer your queries about chronic Kidney Disease. If ypu want to exit, type bye."
 
     #
 
