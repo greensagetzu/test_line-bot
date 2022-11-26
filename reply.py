@@ -1,5 +1,10 @@
+import random
+
 class Reply:
-    def __init__(self, msg):
+    
+    #r = ' '
+
+    def __init__(self,msg):
         self.msg = msg
 
 
@@ -28,6 +33,10 @@ class Reply:
             if word in user_greetings:
                 r = random.choice(bot_greetings)
                 return r
+
+    def __str__(self):
+        return r
+
 
 
 
