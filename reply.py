@@ -25,9 +25,9 @@ class Reply:
         user_greetings = ['hi', 'hey', 'hello', 'greetings', 'wassup']
 
         for word in self.msg.split():
-        	if word in user_greetings:
-        		r = random.choice(bot_greetings)
-        		return r
+            if word in user_greetings:
+                r = random.choice(bot_greetings)
+                return r
 
 
 
