@@ -41,6 +41,8 @@ def callback():
 def handle_message(event):
     msg = event.message.text
 
+    msg = msg.lower()
+
     if 'sorry' in msg:
         sticker_message = StickerSendMessage(
             package_id = '11538',
