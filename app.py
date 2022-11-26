@@ -43,7 +43,7 @@ def handle_message(event):
 
     msg = msg.lower()
 
-    message = 'I apologize, I don't understand.'
+    message = 'I apologize, I don\'t understand.'
 
     if 'sorry' in msg:
         sticker_message = StickerSendMessage(
@@ -83,7 +83,7 @@ def handle_message(event):
     else:
         r = Reply(msg)
         message = r.bot_rsponse()
-        
+
         line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=message))
