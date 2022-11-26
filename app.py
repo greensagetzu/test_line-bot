@@ -63,11 +63,16 @@ def handle_message(event):
         sticker_message)
         return
 
+    elif msg in ['hi', 'hey', 'hello', 'greetings', 'wassup']:
+        r = Reply(msg)
+        k = r.message()
 
-    r = Reply(msg)
-    k = r.message()
+        line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=k))
         
 
+    
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=k))
