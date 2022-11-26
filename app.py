@@ -42,7 +42,7 @@ def handle_message(event):
     msg = event.message.text
 
     user_greetings = ['hi', 'hey', 'hello', 'greetings', 'wassup']
-    if msg in user_greetings:
+    if user_greetings in msg:
         r = Reply(msg)
         k = r.message()
         line_bot_api.reply_message(event.reply_token, k)
