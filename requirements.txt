@@ -4,5 +4,4 @@ flask
 Article
 nltk
 numpy
-warnings
 Scikit-learn
