@@ -87,7 +87,7 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=message))
 
-    elif msg == '':
+    elif msg == ' ':
         message = "Please type something so we can chat :("
 
         line_bot_api.reply_message(

@@ -9,7 +9,7 @@ class Reply:
     def greeting_response(self):
 
         #Bots greeting response
-        bot_greetings = ['Howdy !', 'Hi !', 'Hey !', 'Hello !']
+        bot_greetings = ['Howdy', 'Hi', 'Hey', 'Hello']
         #User greeting
         user_greetings = ['hi', 'hey', 'hello', 'greetings', 'wassup']
 
