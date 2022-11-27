@@ -23,17 +23,17 @@ class Reply:
 
         for word in self.msg.split():
             if word in user_problems:
-                r = 'Start by typing: 'How to learn coding' on Google.'
+                r = f"Start by typing: 'How to learn coding' on Google."
                 return r
 
     def random_response(self):
 
         random_list = [
-        'Please try writing something more descriptive.',
-        'Oh! It appears you wrote something I don\'t understand yet',
-        'Do you mind trying to rephrase that?',
-        'I'm terribly sorry, I didn't quite catch that.',
-        'I can\'t answer that yet, please try asking something else.'
+        "Please try writing something more descriptive.",
+        "Oh! It appears you wrote something I don't understand yet",
+        "Do you mind trying to rephrase that?",
+        "I'm terribly sorry, I didn't quite catch that.",
+        "I can't answer that yet, please try asking something else."
         ]
 
         list_count = len(random_list)
