@@ -79,6 +79,14 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=message))
 
+    elif msg in ['nice to meet you']:
+        message = "The pleasure is all mine!"
+
+        line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=message))
+
+
     elif ['how to code'] in msg:
         r = Reply(msg)
         message = r.problem()
@@ -86,7 +94,6 @@ def handle_message(event):
         line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text = "http://www.google.com/search?q=" + msg))
-
 
     else:
         r = Reply(msg)
