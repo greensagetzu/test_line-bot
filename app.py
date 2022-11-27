@@ -79,10 +79,9 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=message))
 
-    elif ['what', 'is', 'how', 'to'] in msg:
+    elif ['how to code'] in msg:
         r = Reply(msg)
         message = r.problem()
-        
 
         line_bot_api.reply_message(
         event.reply_token,
@@ -97,9 +96,7 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=message))
 
-   
-
-    
+ 
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=message))
