@@ -79,20 +79,15 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=message))
 
-    elif msg in ['problem', 'question']:
+    elif ['what', 'is', 'how', 'to'] in msg:
         r = Reply(msg)
         message = r.problem()
+        
 
         line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=message))
+        TextSendMessage(text = "http://www.google.com/search?q=" + msg))
 
-    elif msg == ' ':
-        message = "Please type something so we can chat :("
-
-        line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=message))
 
     else:
         r = Reply(msg)

@@ -19,12 +19,12 @@ class Reply:
                 return r 
 
     def problem(self):
-        user_problems = ['how', 'to', 'learn', 'code', 'coding', 'apps']
+        r = ''
 
         for word in self.msg.split():
-            if word in user_problems:
-                r = f"Start by typing: 'How to learn coding' on Google."
-                return r
+            r += word + '+'
+
+            return r
 
     def random_response(self):
 
