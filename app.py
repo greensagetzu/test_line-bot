@@ -93,7 +93,7 @@ def handle_message(event):
 
         line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text = "http://www.google.com/search?q=" + msg))
+        TextSendMessage(text = "http://www.google.com/search?q=" + message))
 
     else:
         r = Reply(msg)
