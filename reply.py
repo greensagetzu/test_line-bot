@@ -24,7 +24,7 @@ class Reply:
         for word in self.msg.split():
             r += word + '+'
 
-            return r
+        return r
 
     def random_response(self):
 
