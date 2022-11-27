@@ -95,6 +95,13 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text = "http://www.google.com/search?q=" + message))
 
+    elif 'coffee' in msg:
+        message = "I will make it right away."
+
+        line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=message))
+
     else:
         r = Reply(msg)
         message = r.random_response()
