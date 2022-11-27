@@ -44,8 +44,6 @@ def handle_message(event):
 
     msg = msg.lower()
 
-    #message = 'I apologize, I don\'t understand.'
-
     if 'sorry' in msg:
         sticker_message = StickerSendMessage(
             package_id = '446',
@@ -74,8 +72,23 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=message))
 
-    elif msg in ['exit', 'see you later', 'bye', 'quit', 'break']:
+    elif msg in ['exit', 'see you', 'bye', 'quit', 'break']:
         message = "Chat with you later !"
+
+        line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=message))
+
+    elif msg in ['problem', 'question']:
+        r = Reply(msg)
+        message = r.problem()
+
+        line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=message))
+
+    elif msg == '':
+        message = "Please type something so we can chat :("
 
         line_bot_api.reply_message(
         event.reply_token,
@@ -83,12 +96,13 @@ def handle_message(event):
 
     else:
         r = Reply(msg)
-        message = r.bot_rsponse()
+        message = r.random_response()
 
         line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=message))
 
+   
 
     
     line_bot_api.reply_message(
