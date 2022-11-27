@@ -87,7 +87,7 @@ def handle_message(event):
         TextSendMessage(text=message))
 
 
-    elif ['how to code'] in msg:
+    elif 'how to code' in msg:
         r = Reply(msg)
         message = r.problem()
 
