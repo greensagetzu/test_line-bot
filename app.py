@@ -86,7 +86,6 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=message))
 
-
     elif 'how to code' in msg:
         r = Reply(msg)
         message = r.problem()
